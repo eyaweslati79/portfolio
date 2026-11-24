@@ -25,16 +25,16 @@
    COLOUR and TYPE: rose poudré de la photo en grand aplat, prune profond pour l'encre, sarcelle pour les sources ; Familjen Grotesk + Newsreader.
    LAYOUT: bandeau rose plein écran, projets en rangées éditoriales, parcours en liste à dates suspendues. */
 :root{color-scheme:light dark;
- --bg:light-dark(#ffffff,#1a1120);
- --ink:light-dark(#2b1a2e,#f3e6ec);
- --soft:light-dark(#655268,#c2aebb);
- --rose:light-dark(#ebcfd7,#3a2432);
- --rose-2:light-dark(#f7e9ed,#24161f);
- --rose-ink:light-dark(#954b62,#e7a9bd);
- --teal:light-dark(#1d6863,#7fd0c6);
- --teal-bg:light-dark(#e2f1ef,#173230);
- --line:light-dark(#ead9df,#3a2a36);
- --card:light-dark(#ffffff,#22161f)}
+ --bg:light-dark(#ffffff,#1a1416);
+ --ink:light-dark(#2a1c18,#f2e9ea);
+ --soft:light-dark(#5e5257,#c4b6bb);
+ --rose:light-dark(#e6deec,#2b2230);
+ --rose-2:light-dark(#f5f1f7,#211a1f);
+ --rose-ink:light-dark(#8a2f3e,#e3a3b0);
+ --teal:light-dark(#7a2836,#e8a6b3);
+ --teal-bg:light-dark(#f3e4e7,#3a2228);
+ --line:light-dark(#e7dfe9,#3a2e36);
+ --card:light-dark(#ffffff,#241c21)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
@@ -60,7 +60,7 @@ nav a:hover{color:var(--rose-ink)}
 /* hero */
 .hero{background:var(--rose);padding-top:clamp(28px,4vw,56px)}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:end}
-.portrait{margin:0;position:relative}
+.portrait{margin:0;position:relative;width:100%;max-width:360px;justify-self:center;align-self:center}
 .portrait img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:220px 220px 18px 18px}
 .portrait figcaption{font:500 14px "Familjen Grotesk",sans-serif;color:var(--soft);margin-top:12px}
 .intro h1{font-size:clamp(52px,8vw,104px);letter-spacing:-.035em;font-weight:700;line-height:.95}
@@ -71,7 +71,7 @@ nav a:hover{color:var(--rose-ink)}
 .btn:hover{background:var(--ink);color:var(--rose)}
 
 /* ask panel */
-.ask{background:var(--card);border-radius:18px;padding:clamp(18px,2.4vw,28px);box-shadow:0 1px 0 var(--line),0 18px 40px -24px rgba(60,20,50,.35)}
+.ask{background:var(--card);border-radius:18px;padding:clamp(18px,2.4vw,28px);box-shadow:0 1px 0 var(--line),0 18px 40px -24px rgba(42,28,24,.35)}
 .ask-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:500 14px "Familjen Grotesk",sans-serif;color:var(--soft);margin-bottom:14px}
 .q{font:600 clamp(19px,2vw,22px)/1.3 "Familjen Grotesk",sans-serif;margin:0 0 10px}
 .a{min-height:7.2em;margin:0 0 14px;font-size:18px}
@@ -115,7 +115,7 @@ nav a:hover{color:var(--rose-ink)}
 .shots figure{margin:0}
 .shots figure.big{grid-row:1/3}
 .shots video{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#000}
-.shots img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 14px 30px -22px rgba(60,20,50,.45)}
+.shots img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 14px 30px -22px rgba(42,28,24,.45)}
 .shots figcaption{font:14px/1.4 "Familjen Grotesk",sans-serif;color:var(--soft);margin-top:6px}
 .shots .note{grid-column:1/-1;font:14px "Familjen Grotesk",sans-serif;color:var(--soft);margin:0}
 .feat .shots figcaption{color:var(--bg);opacity:.8}
@@ -170,12 +170,12 @@ footer{padding:22px max(5vw,16px);font:14px "Familjen Grotesk",sans-serif;color:
  .proj{grid-template-columns:minmax(0,1fr)}
  .proj .links{flex-direction:row;flex-wrap:wrap;gap:16px}
  .hero .wrap{grid-template-columns:minmax(0,1fr)}
- .portrait{max-width:380px}
+ .portrait{max-width:320px;justify-self:start}
  dl.skills{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:720px){
  .hero .wrap{grid-template-columns:minmax(0,1fr)}
- .portrait{max-width:340px}
+ .portrait{max-width:280px}
  .cols{grid-template-columns:minmax(0,1fr)}
  nav .links-nav{width:100%;display:flex;gap:20px;overflow-x:auto}
 }
@@ -206,7 +206,7 @@ footer{padding:22px max(5vw,16px);font:14px "Familjen Grotesk",sans-serif;color:
 <section class="band hero" aria-label="Présentation">
  <div class="wrap">
   <figure class="portrait">
-   <img src="eya-weslati.jpg?v=6" fetchpriority="high" decoding="async" alt="Eya Weslati au Bal des projets d'ESPRIT, devant le stand EspritMarket" width="900" height="1200">
+   <img src="eya-weslati.jpg?v=9" fetchpriority="high" decoding="async" alt="Portrait d'Eya Weslati" width="885" height="1180">
    <figcaption>Korba, Nabeul · Tunisie</figcaption>
   </figure>
   <div class="intro">
